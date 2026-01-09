@@ -2,14 +2,13 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# --- Page Configuration ---
+# Page Configuration 
 st.set_page_config(
     page_title="MY Vehicle Registration Forecaster",
-    page_icon="🚗",
     layout="centered"
 )
 
-# --- 1. Load Model & Assets ---
+# 1. Load Model & Assets
 @st.cache_resource
 def load_assets():
     try:
@@ -23,7 +22,7 @@ def load_assets():
 # Initialize the model
 model, defaults = load_assets()
 
-# --- 2. Interface Design ---
+# 2. Interface Design 
 st.title("🚗 Malaysia Vehicle Registration Forecaster")
 st.markdown("""
 This dashboard predicts daily car registration trends based on fuel prices and economic indicators.
@@ -31,7 +30,7 @@ This dashboard predicts daily car registration trends based on fuel prices and e
 st.info("Adjust the sliders in the sidebar to simulate different economic scenarios.")
 st.write("---")
 
-# --- 3. Main Application Logic ---
+# 3. Main Application Logic 
 if model is not None:
     # --- Sidebar Inputs ---
     st.sidebar.header("1. Fuel Prices (RM)")
@@ -73,7 +72,7 @@ if model is not None:
         value=get_default("UNEMPLOYMENT RATE", 3.5), step=0.1
     )
 
-    # --- Prediction Logic ---
+    # Prediction Logic
     
     # 1. Create Dictionary of Inputs
     input_dict = {
@@ -87,11 +86,11 @@ if model is not None:
     # 2. Convert to DataFrame
     input_df = pd.DataFrame([input_dict])
     
-    # 3. [CRITICAL FIX] Enforce the exact column order found in the pickle file
+    # 3. Enforce the exact column order found in the pickle file
     expected_order = ["RON95", "RON97", "DIESEL", "CPI", "UNEMPLOYMENT RATE"]
     input_df = input_df[expected_order]
 
-    # --- Display Inputs & Output ---
+    # Display Inputs & Output 
     
     # Show summary of inputs
     st.subheader("Simulation Parameters")
@@ -141,5 +140,5 @@ else:
     1. `best_model_gbr.pkl` (The trained model)
     2. `defaults.pkl` (The feature averages)
     
-    You can generate them by running the 'Save Model' cell in your Jupyter Notebook.
+
     """)
