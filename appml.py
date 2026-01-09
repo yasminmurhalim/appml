@@ -4,7 +4,7 @@ import joblib
 
 # Page Configuration 
 st.set_page_config(
-    page_title="MY Vehicle Registration Forecaster",
+    page_title="Malaysia Vehicle Registration Forecaster",
     layout="centered"
 )
 
@@ -23,7 +23,7 @@ def load_assets():
 model, defaults = load_assets()
 
 # 2. Interface Design 
-st.title("🚗 Malaysia Vehicle Registration Forecaster")
+st.title("Malaysia Vehicle Registration Forecaster")
 st.markdown("""
 This dashboard predicts daily car registration trends based on fuel prices and economic indicators.
 """)
@@ -104,7 +104,7 @@ if model is not None:
                 prediction = model.predict(input_df)[0]
                 
                 # Display Results
-                st.markdown("### 📊 Forecast Results")
+                st.markdown("### Forecast Results")
                 
                 col1, col2 = st.columns(2)
                 
@@ -124,9 +124,9 @@ if model is not None:
                 
                 # Optional: Add interpretation based on your domain knowledge
                 if prediction > 15000:
-                    st.success("📈 High registration volume expected.")
+                    st.success("High registration volume expected.")
                 else:
-                    st.warning("📉 Low registration volume expected.")
+                    st.warning("Low registration volume expected.")
                     
             except Exception as e:
                 st.error(f"Prediction Failed: {e}")
@@ -134,7 +134,7 @@ if model is not None:
 
 else:
     # Fallback if files are missing
-    st.error("⚠️ System Error: Model files not found.")
+    st.error("System Error: Model files not found.")
     st.warning("""
     Please ensure the following files are in the same folder as this script:
     1. `best_model_gbr.pkl` (The trained model)
@@ -142,3 +142,4 @@ else:
     
 
     """)
+
