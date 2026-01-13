@@ -72,9 +72,6 @@ elif selected_page == "📊 Analytics Dashboard":
     st.markdown("Detailed historical analysis and PowerBI integration.")
     
     # Placeholder for PowerBI
-    st.info("**.")
-    
-
     st.markdown("""
     <iframe width="100%" height="600" 
     src="https://app.powerbi.com/view?r=eyJrIjoiYTUzZmQwMWUtNDRiYi00N2QxLThhNDItNmY1OTRjMTNiNGQ5IiwidCI6IjdmMDQ4ZmMxLTJlYTMtNDhlNC1hYzkyLTkxZDFlYjA5ODA3YyIsImMiOjEwfQ%3D%3D" 
