@@ -74,7 +74,7 @@ elif selected_page == "📊 Analytics Dashboard":
     # Placeholder for PowerBI
     st.markdown("""
     <iframe width="100%" height="600" 
-    src="https://app.powerbi.com/view?r=eyJrIjoiYTUzZmQwMWUtNDRiYi00N2QxLThhNDItNmY1OTRjMTNiNGQ5IiwidCI6IjdmMDQ4ZmMxLTJlYTMtNDhlNC1hYzkyLTkxZDFlYjA5ODA3YyIsImMiOjEwfQ%3D%3D" 
+    src="https://app.powerbi.com/view?r=eyJrIjoiMTk1Nzg5ZWMtYTRlZi00MGEwLTk0MzktOGZhYjdkYWNhOGYyIiwidCI6IjdmMDQ4ZmMxLTJlYTMtNDhlNC1hYzkyLTkxZDFlYjA5ODA3YyIsImMiOjEwfQ%3D%3D" 
     frameborder="0" allowFullScreen="true"></iframe>
     """, unsafe_allow_html=True)
     
