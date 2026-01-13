@@ -72,14 +72,14 @@ elif selected_page == "📊 Analytics Dashboard":
     st.markdown("Detailed historical analysis and PowerBI integration.")
     
     # Placeholder for PowerBI
-    st.info("🚧 **Under Construction:** The interactive PowerBI report is currently being integrated.")
+    st.info("**.")
     
-    # You can uncomment and replace the URL below when your PowerBI is ready
-    # st.markdown("""
-    # <iframe width="100%" height="600" 
-    # src="YOUR_POWERBI_EMBED_URL_HERE" 
-    # frameborder="0" allowFullScreen="true"></iframe>
-    # """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <iframe width="100%" height="600" 
+    src="https://app.powerbi.com/links/rGf4tmHhaI?ctid=7f048fc1-2ea3-48e4-ac92-91d1eb09807c&pbi_source=linkShare" 
+    frameborder="0" allowFullScreen="true"></iframe>
+    """, unsafe_allow_html=True)
     
     st.image("https://placehold.co/800x400?text=PowerBI+Dashboard+Coming+Soon", use_container_width=True)
 
@@ -164,7 +164,7 @@ elif selected_page == "🔮 Prediction & Trends":
 
 # INSIGHTS & FEEDBACK
 
-elif selected_page == "Insights & Feedback":
+elif selected_page == "🔔 Insights & Feedback":
     st.header("Strategic Notes & Feedback")
 
     st.warning("""
