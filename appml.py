@@ -81,8 +81,6 @@ elif selected_page == "📊 Analytics Dashboard":
     frameborder="0" allowFullScreen="true"></iframe>
     """, unsafe_allow_html=True)
     
-    st.image("https://placehold.co/800x400?text=PowerBI+Dashboard+Coming+Soon", use_container_width=True)
-
 
 # PREDICTION & TRENDS PAGE 
 
